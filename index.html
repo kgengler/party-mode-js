@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PartyMode.js</title>
+</head>
+<body>
+    <a href="javascript:(function(){function createPlayer(){var e=document.createElement('div');e.style.position='fixed',e.style.zIndex=5e3,e.style.right=0,e.style.top=0,e.style.opacity=.2;var t=document.createElement('div');t.id='pmjs',e.appendChild(t),document.body.appendChild(e),e.onmouseover=function(){e.style.opacity=1},e.onmouseout=function(){e.style.opacity=.2},e.style.webkitTransition='opacity 0.3s ease-in-out',e.style.transition='opacity 0.3s ease-in-out';var o=document.createElement('script');o.src='https://www.youtube.com/iframe_api',document.body.appendChild(o);var n;window.onYouTubeIframeAPIReady=function(){n=new YT.Player('pmjs',{height:'200',width:'305',videoId:'9bZkp7q19f0',events:{onReady:onPlayerReady,onStateChange:onPlayerStateChange}})}}function onPlayerReady(e){e.target.playVideo()}function onPlayerStateChange(e){e.data==YT.PlayerState.PLAYING&&window.setTimeout(startPartyMode,4e3)}function stopVideo(){player.stopVideo()}function startPartyMode(){window.setInterval(function(){!function(e){for(var t=0;t<e.length;t++)e[t].style.backgroundColor='#'+(16777215*Math.random()<<0).toString(16)}(document.querySelectorAll('*'))},500)}createPlayer();})();">Start Party</a>
+</body>
+</html>
+
